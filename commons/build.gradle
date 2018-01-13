@@ -1,3 +1,15 @@
 dependencies {
     compile project(':proto')
 }
+
+apply plugin: 'checkstyle'
+tasks.withType(Checkstyle) {
+    def configDir = project.rootProject.file('config/checkstyle')
+    configProperties = ['config-dir': configDir]
+    configFile = new File(configDir, 'checkstyle_checks.xml')
+    showViolations = true
+    reports {
+        xml.enabled = false
+        html.enabled = true
+    }
+}
