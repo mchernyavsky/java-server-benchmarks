@@ -1,0 +1,32 @@
+allprojects {
+    repositories {
+        mavenCentral()
+    }
+
+    group 'com.github.mchernyavsky'
+}
+
+ext.libsVersions = [
+        gradle: '4.4.1',
+        junit : '4.12'
+]
+ext.libs = [
+        junit : "junit:junit:${libsVersions.junit}"
+]
+
+subprojects {
+    apply plugin: 'java'
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    test {
+        testLogging.showStandardStreams = true
+    }
+
+    dependencies {
+        testCompile libs.junit
+    }
+}
+
+
+task wrapper(type: Wrapper) {
+    gradleVersion = libsVersions.gradle
+}
