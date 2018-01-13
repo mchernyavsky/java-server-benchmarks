@@ -10,6 +10,7 @@ ext.libsVersions = [
         gradle: '4.4.1',
         lombok: '1.16.18',
         slf4j : '1.7.25',
+        checkstyle : '8.7',
         junit : '4.12'
 ]
 ext.libs = [
@@ -23,6 +24,22 @@ subprojects {
     sourceCompatibility = JavaVersion.VERSION_1_8
     test {
         testLogging.showStandardStreams = true
+    }
+
+    apply plugin: 'checkstyle'
+    checkstyle {
+        toolVersion = libsVersions.checkstyle
+    }
+
+    tasks.withType(Checkstyle) {
+        def configDir = project.rootProject.file('config/checkstyle')
+        configProperties = ['config-dir': configDir]
+        configFile = new File(configDir, 'checkstyle_checks.xml')
+        showViolations = true
+        reports {
+            xml.enabled = false
+            html.enabled = true
+        }
     }
 
     dependencies {

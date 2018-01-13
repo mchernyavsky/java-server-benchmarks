@@ -32,7 +32,7 @@ dependencies {
 }
 
 protobuf {
-    generatedFilesBaseDir = "$projectDir/src"
+    generatedFilesBaseDir = "$projectDir/src/generated"
 
     protoc {
         artifact = "com.google.protobuf:protoc:${libsVersions.protoc}"
