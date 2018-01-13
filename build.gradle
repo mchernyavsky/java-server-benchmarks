@@ -8,9 +8,11 @@ allprojects {
 
 ext.libsVersions = [
         gradle: '4.4.1',
+        lombok: '1.16.18',
         junit : '4.12'
 ]
 ext.libs = [
+        lombok: "org.projectlombok:lombok:${libsVersions.lombok}",
         junit : "junit:junit:${libsVersions.junit}"
 ]
 
@@ -22,6 +24,7 @@ subprojects {
     }
 
     dependencies {
+        compile libs.lombok
         testCompile libs.junit
     }
 }
