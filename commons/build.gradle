@@ -1,3 +1,11 @@
+ext.libsVersions = [
+        commonsCli  : '1.4'
+]
+ext.libs = [
+        commonsCli  : "commons-cli:commons-cli:${libsVersions.commonsCli}"
+]
+
 dependencies {
+    compile libs.commonsCli
     compile project(':proto')
 }
