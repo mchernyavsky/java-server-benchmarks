@@ -6,10 +6,6 @@ option java_outer_classname = "ClientServerProtocol";
 
 package network;
 
-message SortRequest {
-    repeated int32 data = 1 [packed = true];
-}
-
-message ServerResponse {
+message Message {
     repeated int32 data = 1 [packed = true];
 }

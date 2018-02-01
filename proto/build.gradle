@@ -31,8 +31,12 @@ dependencies {
     compile libs.grpcProtobuf
 }
 
+tasks.withType(Checkstyle) {
+    enabled = false
+}
+
 protobuf {
-    generatedFilesBaseDir = "$projectDir/src/generated"
+    generatedFilesBaseDir = "$projectDir/src"
 
     protoc {
         artifact = "com.google.protobuf:protoc:${libsVersions.protoc}"
