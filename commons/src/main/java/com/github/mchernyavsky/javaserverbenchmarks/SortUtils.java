@@ -13,7 +13,7 @@ public final class SortUtils {
     public <T extends Comparable<? super T>> void insertionSort(@NotNull final List<T> data) {
         for (int i = 1; i < data.size(); i++) {
             for (int j = i - 1; j >= 0 && data.get(j).compareTo(data.get(j + 1)) > 0; j--) {
-                Collections.swap(data, i, j);
+                Collections.swap(data, j, j + 1);
             }
         }
     }
@@ -23,16 +23,16 @@ public final class SortUtils {
             int minIndex = i;
             for (int j = i + 1; j < data.size(); j++) {
                 if (data.get(j).compareTo(data.get(minIndex)) < 0) {
-                    Collections.swap(data, j, minIndex);
                     minIndex = j;
                 }
             }
+            Collections.swap(data, i, minIndex);
         }
     }
 
     public <T extends Comparable<? super T>> void bubbleSort(@NotNull final List<T> data) {
-        for (int i = 1; i < data.size() - 1; i++) {
-            for (int j = 1; j < data.size() - i - 1; j++) {
+        for (int i = 0; i < data.size() - 1; i++) {
+            for (int j = 0; j < data.size() - i - 1; j++) {
                 if (data.get(j).compareTo(data.get(j + 1)) > 0) {
                     Collections.swap(data, j, j + 1);
                 }
