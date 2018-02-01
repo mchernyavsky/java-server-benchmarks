@@ -205,31 +205,31 @@
             <property name="tokens" value="LAMBDA"/>
             <property name="allowSingleLineStatement" value="true"/>
         </module>
-        <module name="RightCurly">
-            <property name="tokens" value="METHOD_DEF"/>
-            <property name="tokens" value="CTOR_DEF"/>
-            <property name="tokens" value="CLASS_DEF"/>
-            <property name="tokens" value="INSTANCE_INIT"/>
-            <property name="tokens" value="LITERAL_FOR"/>
-            <property name="tokens" value="STATIC_INIT"/>
-            <property name="tokens" value="LITERAL_WHILE"/>
-            <property name="tokens" value="LITERAL_CATCH"/>
-            <property name="tokens" value="LITERAL_ELSE"/>
-            <property name="tokens" value="LITERAL_FINALLY"/>
-            <property name="tokens" value="LITERAL_IF"/>
-            <property name="tokens" value="LITERAL_TRY"/>
-            <property name="option" value="alone"/>
-        </module>
-        <module name="RightCurly">
-            <property name="tokens" value="LITERAL_DO"/>
-            <property name="option" value="same"/>
-        </module>
+        <!--<module name="RightCurly">-->
+            <!--<property name="tokens" value="METHOD_DEF"/>-->
+            <!--<property name="tokens" value="CTOR_DEF"/>-->
+            <!--<property name="tokens" value="CLASS_DEF"/>-->
+            <!--<property name="tokens" value="INSTANCE_INIT"/>-->
+            <!--<property name="tokens" value="LITERAL_FOR"/>-->
+            <!--<property name="tokens" value="STATIC_INIT"/>-->
+            <!--<property name="tokens" value="LITERAL_WHILE"/>-->
+            <!--<property name="tokens" value="LITERAL_CATCH"/>-->
+            <!--<property name="tokens" value="LITERAL_ELSE"/>-->
+            <!--<property name="tokens" value="LITERAL_FINALLY"/>-->
+            <!--<property name="tokens" value="LITERAL_IF"/>-->
+            <!--<property name="tokens" value="LITERAL_TRY"/>-->
+            <!--<property name="option" value="alone"/>-->
+        <!--</module>-->
+        <!--<module name="RightCurly">-->
+            <!--<property name="tokens" value="LITERAL_DO"/>-->
+            <!--<property name="option" value="same"/>-->
+        <!--</module>-->
 
         <!-- Class Design -->
-        <module name="DesignForExtension">
-            <property name="ignoredAnnotations"
-                      value="Override, Test, Before, After, BeforeClass, AfterClass"/>
-        </module>
+        <!--<module name="DesignForExtension">-->
+            <!--<property name="ignoredAnnotations"-->
+                      <!--value="Override, Test, Before, After, BeforeClass, AfterClass"/>-->
+        <!--</module>-->
         <module name="FinalClass"/>
         <module name="HideUtilityClassConstructor"/>
         <module name="InnerTypeLast"/>
@@ -239,7 +239,7 @@
         <module name="ThrowsCount">
             <property name="max" value="2"/>
         </module>
-        <module name="VisibilityModifier"/>
+        <!--<module name="VisibilityModifier"/>-->
 
         <!-- Coding -->
         <module name="ArrayTrailingComma"/>
@@ -290,7 +290,7 @@
         </module>
         <module name="MissingSwitchDefault"/>
         <module name="ModifiedControlVariable"/>
-        <module name="MultipleStringLiterals"/>
+        <!--<module name="MultipleStringLiterals"/>-->
         <module name="MultipleVariableDeclarations"/>
         <module name="NestedForDepth">
             <property name="max" value="2"/>
@@ -306,17 +306,17 @@
         <module name="PackageDeclaration"/>
         <module name="ParameterAssignment"/>
         <module name="RequireThis"/>
-        <module name="ReturnCount">
-            <property name="max" value="1"/>
-            <property name="maxForVoid" value="0"/>
-        </module>
+        <!--<module name="ReturnCount">-->
+            <!--<property name="max" value="1"/>-->
+            <!--<property name="maxForVoid" value="0"/>-->
+        <!--</module>-->
         <module name="SimplifyBooleanExpression"/>
         <module name="SimplifyBooleanReturn"/>
         <module name="StringLiteralEquality"/>
         <module name="SuperClone"/>
         <module name="SuperFinalize"/>
         <module name="UnnecessaryParentheses"/>
-        <module name="VariableDeclarationUsageDistance"/>
+        <!--<module name="VariableDeclarationUsageDistance"/>-->
 
         <!-- Filters-->
         <module name="SuppressionCommentFilter">
@@ -341,13 +341,13 @@
         <!-- Imports -->
         <module name="AvoidStarImport"/>
         <module name="AvoidStaticImport"/>
-        <module name="CustomImportOrder">
-            <property name="customImportOrderRules"
-                      value="STATIC###STANDARD_JAVA_PACKAGE###SPECIAL_IMPORTS"/>
-            <property name="specialImportsRegExp" value="^org\."/>
-            <property name="sortImportsInGroupAlphabetically" value="true"/>
-            <property name="separateLineBetweenGroups" value="true"/>
-        </module>
+        <!--<module name="CustomImportOrder">-->
+            <!--<property name="customImportOrderRules"-->
+                      <!--value="STATIC###STANDARD_JAVA_PACKAGE###SPECIAL_IMPORTS"/>-->
+            <!--<property name="specialImportsRegExp" value="^org\."/>-->
+            <!--<property name="sortImportsInGroupAlphabetically" value="true"/>-->
+            <!--<property name="separateLineBetweenGroups" value="true"/>-->
+        <!--</module>-->
         <module name="IllegalImport"/>
         <!--<module name="ImportControl">-->
         <!--<property name="id" value="ImportControlMain"/>-->
@@ -359,13 +359,13 @@
         <!--<property name="file" value="${checkstyle.importcontroltest.file}"/>-->
         <!--<property name="path" value="^.*[\\/]src[\\/]test[\\/].*$"/>-->
         <!--</module>-->
-        <module name="ImportOrder">
-            <property name="groups" value="/^java\./,javax,org"/>
-            <property name="ordered" value="true"/>
-            <property name="separated" value="true"/>
-            <property name="option" value="top"/>
-            <property name="sortStaticImportsAlphabetically" value="true"/>
-        </module>
+        <!--<module name="ImportOrder">-->
+            <!--<property name="groups" value="/^java\./,javax,org"/>-->
+            <!--<property name="ordered" value="true"/>-->
+            <!--<property name="separated" value="true"/>-->
+            <!--<property name="option" value="top"/>-->
+            <!--<property name="sortStaticImportsAlphabetically" value="true"/>-->
+        <!--</module>-->
         <module name="RedundantImport"/>
         <module name="UnusedImports"/>
 
